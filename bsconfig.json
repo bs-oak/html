@@ -1,0 +1,22 @@
+{
+  "name": "html",
+  "version": "0.1.0",
+  "sources": {
+    "dir": "src",
+    "subdirs": true
+  },
+  "package-specs": {
+    "module": "commonjs",
+    "in-source": true
+  },
+  "suffix": ".bs.js",
+  "namespace": true,
+  "bs-dependencies": [
+    "@bs-oak/virtual-dom",
+    "@bs-oak/json"
+  ],
+  "warnings": {
+    "error": "+101"
+  },
+  "refmt": 3
+}

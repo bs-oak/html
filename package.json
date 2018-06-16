@@ -1,0 +1,21 @@
+{
+  "name": "html",
+  "version": "0.1.0",
+  "scripts": {
+    "clean": "bsb -clean-world",
+    "build": "bsb -make-world",
+    "watch": "bsb -make-world -w"
+  },
+  "keywords": [
+    "BuckleScript"
+  ],
+  "author": "Erik Lott",
+  "license": "MIT",
+  "devDependencies": {
+    "bs-platform": "^3.1.5"
+  },
+  "dependencies": {
+    "@bs-oak/json": "^0.1.1",
+    "@bs-oak/virtual-dom": "^0.1.6"
+  }
+}
