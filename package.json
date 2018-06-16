@@ -1,5 +1,5 @@
 {
-  "name": "html",
+  "name": "@bs-oak/html",
   "version": "0.1.0",
   "scripts": {
     "clean": "bsb -clean-world",
