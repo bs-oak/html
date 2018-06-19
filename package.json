@@ -1,6 +1,6 @@
 {
   "name": "@bs-oak/html",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "scripts": {
     "clean": "bsb -clean-world",
     "build": "bsb -make-world",
@@ -15,7 +15,7 @@
     "bs-platform": "^3.1.5"
   },
   "dependencies": {
-    "@bs-oak/json": "^0.1.1",
-    "@bs-oak/virtual-dom": "^0.1.6"
+    "@bs-oak/json": "^0.1.3",
+    "@bs-oak/virtual-dom": "^0.1.7"
   }
 }
