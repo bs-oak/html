@@ -79,14 +79,23 @@ let method' v =
 
 (* Event *)
 
-let on event decoder =
-  BsOakVirtualDom.Virtual_dom.Property.on event (BsOakVirtualDom.Virtual_dom.Property.Normal decoder)
-
 let always_prevent_default msg =
   msg, true
 
+let always_stop x =
+  (x, true)
+
+let target_value =
+  BsOakJson.Decode.at ["target"; "value"] BsOakJson.Decode.string
+
+let on event decoder =
+  BsOakVirtualDom.Virtual_dom.Property.on event (BsOakVirtualDom.Virtual_dom.Property.Normal decoder)
+
 let prevent_default_on event decoder =
   BsOakVirtualDom.Virtual_dom.Property.on event (BsOakVirtualDom.Virtual_dom.Property.MayPreventDefault decoder)
+
+let stop_propagation_on event decoder =
+  BsOakVirtualDom.Virtual_dom.Property.on event (BsOakVirtualDom.Virtual_dom.Property.MayStopPropagation decoder)
 
 let on_click msg =
   on "onclick" (BsOakJson.Decode.succeed msg)
@@ -94,3 +103,7 @@ let on_click msg =
 let on_submit msg =
   let module Json = BsOakJson.Decode in
   prevent_default_on "submit" (Json.map always_prevent_default (Json.succeed msg))
+
+let on_input tagger =
+  let module Json = BsOakJson.Decode in
+  stop_propagation_on "input" (Json.map always_stop (Json.map tagger target_value))
