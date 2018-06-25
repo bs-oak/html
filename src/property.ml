@@ -102,8 +102,8 @@ let on_click msg =
 
 let on_submit msg =
   let module Json = BsOakJson.Decode in
-  prevent_default_on "submit" (Json.map always_prevent_default (Json.succeed msg))
+  prevent_default_on "onsubmit" (Json.map always_prevent_default (Json.succeed msg))
 
 let on_input tagger =
   let module Json = BsOakJson.Decode in
-  stop_propagation_on "input" (Json.map always_stop (Json.map tagger target_value))
+  stop_propagation_on "oninput" (Json.map always_stop (Json.map tagger target_value))
