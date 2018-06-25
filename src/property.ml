@@ -15,9 +15,6 @@ let float key value =
 let bool key value = 
   BsOakVirtualDom.Virtual_dom.Property.create key (BsOakJson.Encode.bool value)
 
-let on =
-  BsOakVirtualDom.Virtual_dom.Property.on
-
 let map = 
   BsOakVirtualDom.Virtual_dom.Property.map
 
@@ -85,5 +82,15 @@ let method' v =
 let on event decoder =
   BsOakVirtualDom.Virtual_dom.Property.on event (BsOakVirtualDom.Virtual_dom.Property.Normal decoder)
 
+let always_prevent_default msg =
+  msg, true
+
+let prevent_default_on event decoder =
+  BsOakVirtualDom.Virtual_dom.Property.on event (BsOakVirtualDom.Virtual_dom.Property.MayPreventDefault decoder)
+
 let on_click msg =
   on "onclick" (BsOakJson.Decode.succeed msg)
+
+let on_submit msg =
+  let module Json = BsOakJson.Decode in
+  prevent_default_on "submit" (Json.map always_prevent_default (Json.succeed msg))
