@@ -59,3 +59,5 @@ val on_click : 'a -> 'a t
 val on_submit : 'a -> 'a t
 
 val on_input : (string -> 'a) -> 'a t
+
+val on_check : (bool -> 'a) -> 'a t

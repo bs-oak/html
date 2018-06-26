@@ -1,22 +1,26 @@
-type 'a t = 'a BsOakVirtualDom.Virtual_dom.Property.t
+module Decode = BsOakJson.Decode
+module Encode = BsOakJson.Encode
+module Property = BsOakVirtualDom.Virtual_dom.Property
+
+type 'a t = 'a Property.t
 
 let create =
-  BsOakVirtualDom.Virtual_dom.Property.create
+  Property.create
 
 let string key value = 
-  BsOakVirtualDom.Virtual_dom.Property.create key (BsOakJson.Encode.string value)
+  Property.create key (Encode.string value)
 
 let int key value = 
-  BsOakVirtualDom.Virtual_dom.Property.create key (BsOakJson.Encode.int value)
+  Property.create key (Encode.int value)
 
 let float key value =
-  BsOakVirtualDom.Virtual_dom.Property.create key (BsOakJson.Encode.float value)
+  Property.create key (Encode.float value)
 
 let bool key value = 
-  BsOakVirtualDom.Virtual_dom.Property.create key (BsOakJson.Encode.bool value)
+  Property.create key (Encode.bool value)
 
 let map = 
-  BsOakVirtualDom.Virtual_dom.Property.map
+  Property.map
 
 let style pairs =
   pairs
@@ -86,24 +90,29 @@ let always_stop x =
   (x, true)
 
 let target_value =
-  BsOakJson.Decode.at ["target"; "value"] BsOakJson.Decode.string
+  Decode.at ["target"; "value"] Decode.string
+
+let target_checked =
+  Decode.at ["target"; "checked"] Decode.bool
 
 let on event decoder =
-  BsOakVirtualDom.Virtual_dom.Property.on event (BsOakVirtualDom.Virtual_dom.Property.Normal decoder)
+  Property.on event (Property.Normal decoder)
 
 let prevent_default_on event decoder =
-  BsOakVirtualDom.Virtual_dom.Property.on event (BsOakVirtualDom.Virtual_dom.Property.MayPreventDefault decoder)
+  Property.on event (Property.MayPreventDefault decoder)
 
 let stop_propagation_on event decoder =
-  BsOakVirtualDom.Virtual_dom.Property.on event (BsOakVirtualDom.Virtual_dom.Property.MayStopPropagation decoder)
+  Property.on event (Property.MayStopPropagation decoder)
 
 let on_click msg =
-  on "onclick" (BsOakJson.Decode.succeed msg)
+  on "onclick" (Decode.succeed msg)
 
 let on_submit msg =
-  let module Json = BsOakJson.Decode in
-  prevent_default_on "onsubmit" (Json.map always_prevent_default (Json.succeed msg))
+  prevent_default_on "onsubmit" (Decode.map always_prevent_default (Decode.succeed msg))
 
 let on_input tagger =
-  let module Json = BsOakJson.Decode in
-  stop_propagation_on "oninput" (Json.map always_stop (Json.map tagger target_value))
+  stop_propagation_on "oninput" (Decode.map always_stop (Decode.map tagger target_value))
+
+let on_check tagger =
+  on "onchange" (Decode.map tagger target_checked)
+  
