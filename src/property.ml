@@ -41,6 +41,9 @@ let class_list classes =
   |> String.concat ", "
   |> string "class"
 
+let href v =
+  string "href" v
+
 let id v = 
   string "id" v 
 

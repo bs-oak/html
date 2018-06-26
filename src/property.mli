@@ -20,6 +20,8 @@ val class' : string -> 'a t
 
 val class_list : (string * bool) list -> 'a t
 
+val href : string -> 'a t
+
 val id : string -> 'a t
 
 val title : string -> 'a t
