@@ -119,3 +119,8 @@ let on_input tagger =
 let on_check tagger =
   on "onchange" (Decode.map tagger target_checked)
   
+let on_focus msg =
+  on "onfocus" (Decode.succeed msg)
+
+let on_blur msg =
+  on "onblur" (Decode.succeed msg)
