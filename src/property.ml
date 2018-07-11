@@ -32,14 +32,14 @@ let attribute =
   string
 
 let class' v = 
-  string "class" v 
+  string "className" v 
 
 let class_list classes =
   classes
   |> List.filter snd
   |> List.map fst
   |> String.concat ", "
-  |> string "class"
+  |> string "className"
 
 let href v =
   string "href" v
