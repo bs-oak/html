@@ -84,6 +84,9 @@ let disabled v =
 let method' v = 
   string "method" v
 
+let name v = 
+  string "name" v  
+
 (* Event *)
 
 let always_prevent_default msg =

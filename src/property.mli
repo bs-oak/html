@@ -46,6 +46,8 @@ val disabled : bool -> 'a t
 
 val method' : string -> 'a t
 
+val name : string -> 'a t
+
 (* events *)
 
 val target_value : string BsOakJson.Decode.decoder
