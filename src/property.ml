@@ -127,3 +127,7 @@ let on_focus msg =
 
 let on_blur msg =
   on "onblur" (Decode.succeed msg)
+
+let on_file_change tagger =
+  let value_to_file_list v = Obj.magic v in
+  on "onchange" (Decode.map tagger ( Decode.map value_to_file_list ( Decode.at ["target"; "files"] Decode.value)))

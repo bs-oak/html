@@ -1,6 +1,6 @@
 {
   "name": "@bs-oak/html",
-  "version": "0.1.9",
+  "version": "0.1.10",
   "sources": {
     "dir": "src",
     "subdirs": true
@@ -13,7 +13,8 @@
   "namespace": true,
   "bs-dependencies": [
     "@bs-oak/virtual-dom",
-    "@bs-oak/json"
+    "@bs-oak/json",
+    "@bs-oak/file"
   ],
   "warnings": {
     "error": "+101"

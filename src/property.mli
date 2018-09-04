@@ -69,3 +69,5 @@ val on_check : (bool -> 'a) -> 'a t
 val on_focus : 'a -> 'a t
 
 val on_blur : 'a -> 'a t
+
+val on_file_change : (BsOakFile.File_list.t -> 'a) -> 'a t
