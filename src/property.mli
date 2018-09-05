@@ -48,6 +48,8 @@ val method' : string -> 'a t
 
 val name : string -> 'a t
 
+val src : string -> 'a t
+
 (* events *)
 
 val target_value : string BsOakJson.Decode.decoder

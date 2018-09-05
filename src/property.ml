@@ -87,6 +87,10 @@ let method' v =
 let name v = 
   string "name" v  
 
+let src v = 
+  string "src" v  
+
+
 (* Event *)
 
 let always_prevent_default msg =
