@@ -73,6 +73,9 @@ let placeholder v =
 let selected v = 
   bool "selected" v
 
+let multiple v = 
+  bool "multiple" v
+
 (* Input Helpers *)
 
 let action v = 
