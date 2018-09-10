@@ -50,7 +50,15 @@ val method' : string -> 'a t
 
 val name : string -> 'a t
 
+(* embedded content *)
+
 val src : string -> 'a t
+
+val width : int -> 'a t
+
+val height : int -> 'a t
+
+val alt : string -> 'a t
 
 (* events *)
 

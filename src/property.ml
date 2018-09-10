@@ -90,9 +90,19 @@ let method' v =
 let name v = 
   string "name" v  
 
-let src v = 
-  string "src" v  
+(* embedded content *)
 
+let src v = 
+  string "src" v 
+
+let width v = 
+  int "width" v
+
+let height v = 
+  int "height" v
+
+let alt v = 
+  string "alt" v 
 
 (* Event *)
 
