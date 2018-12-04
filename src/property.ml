@@ -38,7 +38,7 @@ let class_list classes =
   classes
   |> List.filter snd
   |> List.map fst
-  |> String.concat ", "
+  |> String.concat " "
   |> string "className"
 
 let href v =
