@@ -42,6 +42,8 @@ val selected : bool -> 'a t
 
 val multiple : bool -> 'a t
 
+val accept : string -> 'a t
+
 val action : string -> 'a t
 
 val disabled : bool -> 'a t

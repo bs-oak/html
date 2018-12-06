@@ -76,6 +76,9 @@ let selected v =
 let multiple v = 
   bool "multiple" v
 
+let accept v =
+  string "accept" v
+
 (* Input Helpers *)
 
 let action v = 
