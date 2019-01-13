@@ -52,6 +52,8 @@ val method' : string -> 'a t
 
 val name : string -> 'a t
 
+val for' : string -> 'a t
+
 (* embedded content *)
 
 val src : string -> 'a t

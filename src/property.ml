@@ -93,6 +93,9 @@ let method' v =
 let name v = 
   string "name" v  
 
+let for' v = 
+  string "for" v  
+
 (* embedded content *)
 
 let src v = 
