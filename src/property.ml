@@ -94,7 +94,7 @@ let name v =
   string "name" v  
 
 let for' v = 
-  string "for" v  
+  string "htmlFor" v  
 
 (* embedded content *)
 
