@@ -1,11 +1,8 @@
-module Property = Html_property
+type 'a t = 'a BsOakVirtualDom.Virtual_dom.Node.t
 
-type 'a t = 'a  BsOakVirtualDom.Virtual_dom.Node.t
-
-let text =  BsOakVirtualDom.Virtual_dom.Node.text
-let node =  BsOakVirtualDom.Virtual_dom.Node.node
-let map =  BsOakVirtualDom.Virtual_dom.Node.map
-
+let text = BsOakVirtualDom.Virtual_dom.Node.text
+let node = BsOakVirtualDom.Virtual_dom.Node.node
+let map = BsOakVirtualDom.Virtual_dom.Node.map
 
 (* Headings *)
 
