@@ -12,9 +12,14 @@ let string_property key value =
 let bool_property key value =
   Attribute.property key (Encode.bool value)
 
-(* internal security *)
+let no_javascript_uri s = 
+  let re = [%re "/^javascript:/i"] in
+  let tester = Js.String.replaceByRe [%re "/\\s/g"] "" s in
+  if Js.Re.test tester re then "" else s
 
-let no_javascript_uri s = s
+let no_javascript_or_html_uri value =
+  let re = [%re "/^\\s*(javascript:|data:text\\/html)/i"] in
+  if Js.Re.test value re then "" else value
 
 (* primitives *)
 
@@ -195,7 +200,7 @@ let coords v =
 (* embedded content *)
 
 let src v =
-  string_property "src" (no_javascript_uri v)
+  string_property "src" (no_javascript_or_html_uri v)
 
 let height v =
   attribute "height" (string_of_int v)
