@@ -16,6 +16,9 @@
     "@bs-oak/json",
     "@bs-oak/file"
   ],
+  "bs-dev-dependencies": [
+    "@glennsl/bs-jest"
+  ],
   "warnings": {
     "error": "+101"
   },

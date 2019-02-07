@@ -6,146 +6,150 @@ let map = BsOakVirtualDom.Virtual_dom.Node.map
 
 (* Headings *)
 
-let h1 p c = node "h1" p c
-let h2 p c = node "h2" p c
-let h3 p c = node "h3" p c
-let h4 p c = node "h4" p c
-let h5 p c = node "h5" p c
-let h6 p c = node "h6" p c
+let h1 a c = node "h1" a c
+let h2 a c = node "h2" a c
+let h3 a c = node "h3" a c
+let h4 a c = node "h4" a c
+let h5 a c = node "h5" a c
+let h6 a c = node "h6" a c
 
 (* Grouping Content *)
 
-let div p c = node "div" p c
-let p p c = node "p" p c
-let hr p c = node "hr" p c
-let pre p c = node "pre" p c
-let blockquote p c = node "blockquote" p c
+let div a c = node "div" a c
+let p a c = node "p" a c
+let hr a c = node "hr" a c
+let pre a c = node "pre" a c
+let blockquote a c = node "blockquote" a c
 
 (* Text *)
 
-let span p c = node "span" p c
-let a p c = node "a" p c
-let code p c = node "code" p c
-let em p c = node "em" p c
-let strong p c = node "strong" p c
-let i p c = node "i" p c
-let b p c = node "b" p c
-let u p c = node "u" p c
-let sub p c = node "sub" p c
-let sup p c = node "sup" p c
-let br p c = node "br" p c
+let span a c = node "span" a c
+let a a' c = node "a" a' c
+let code a c = node "code" a c
+let em a c = node "em" a c
+let strong a c = node "strong" a c
+let i a c = node "i" a c
+let b a c = node "b" a c
+let u a c = node "u" a c
+let sub a c = node "sub" a c
+let sup a c = node "sup" a c
+let br a c = node "br" a c
 
 (* Lists *)
 
-let ol p c = node "ol" p c
-let ul p c = node "ul" p c
-let li p c = node "li" p c
-let dl p c = node "dl" p c
-let dt p c = node "dt" p c
-let dd p c = node "dd" p c
+let ol a c = node "ol" a c
+let ul a c = node "ul" a c
+let li a c = node "li" a c
+let dl a c = node "dl" a c
+let dt a c = node "dt" a c
+let dd a c = node "dd" a c
 
 (* Embedded Content *)
 
-let img p c = node "img" p c
-let iframe p c = node "iframe" p c
-let canvas p c = node "canvas" p c
-let math p c = node "math" p c
+let img a c = node "img" a c
+let iframe a c = node "iframe" a c
+let canvas a c = node "canvas" a c
+let math a c = node "math" a c
 
 (* Inputs *)
 
-let form p c = node "form" p c
-let input p c = node "input" p c
-let textarea p c = node "textarea" p c
-let button p c = node "button" p c
-let select p c = node "select" p c
-let option p c = node "option" p c
+let form a c = node "form" a c
+let input a c = node "input" a c
+let textarea a c = node "textarea" a c
+let button a c = node "button" a c
+let select a c = node "select" a c
+let option a c = node "option" a c
 
 (* Sections *)
 
-let section p c = node "section" p c
-let nav p c = node "nav" p c
-let article p c = node "article" p c
-let aside p c = node "aside" p c
-let header p c = node "header" p c
-let footer p c = node "footer" p c
-let address p c = node "address" p c
-let main p c = node "main" p c
-let body p c = node "body" p c
+let section a c = node "section" a c
+let nav a c = node "nav" a c
+let article a c = node "article" a c
+let aside a c = node "aside" a c
+let header a c = node "header" a c
+let footer a c = node "footer" a c
+let address a c = node "address" a c
+let main a c = node "main" a c
 
 (* Figures *)
 
-let figure p c = node "figure" p c
-let figcaption p c = node "figcaption" p c
+let figure a c = node "figure" a c
+let figcaption a c = node "figcaption" a c
 
 (* Tables *)
 
-let table p c = node "table" p c
-let caption p c = node "caption" p c
-let colgroup p c = node "colgroup" p c
-let col p c = node "col" p c
-let tbody p c = node "tbody" p c
-let thead p c = node "thead" p c
-let tfoot p c = node "tfoot" p c
-let tr p c = node "tr" p c
-let td p c = node "td" p c
-let th p c = node "th" p c
+let table a c = node "table" a c
+let caption a c = node "caption" a c
+let colgroup a c = node "colgroup" a c
+let col a c = node "col" a c
+let tbody a c = node "tbody" a c
+let thead a c = node "thead" a c
+let tfoot a c = node "tfoot" a c
+let tr a c = node "tr" a c
+let td a c = node "td" a c
+let th a c = node "th" a c
 
 (* Less Common Elements *)
 
-let fieldset p c = node "fieldset" p c
-let legend p c = node "legend" p c
-let label p c = node "label" p c
-let datalist p c = node "datalist" p c
-let optgroup p c = node "optgroup" p c
-let keygen p c = node "keygen" p c
-let output p c = node "output" p c
-let progress p c = node "progress" p c
-let meter p c = node "meter" p c
+let fieldset a c = node "fieldset" a c
+let legend a c = node "legend" a c
+let label a c = node "label" a c
+let datalist a c = node "datalist" a c
+let optgroup a c = node "optgroup" a c
+let output a c = node "output" a c
+let progress a c = node "progress" a c
+let meter a c = node "meter" a c
 
 (* Audio & Video *)
 
-let audio p c = node "audio" p c
-let video p c = node "video" p c
-let source p c = node "source" p c
-let track p c = node "track" p c
+let audio a c = node "audio" a c
+let video a c = node "video" a c
+let source a c = node "source" a c
+let track a c = node "track" a c
 
 (* Embedded Objects *)
 
-let embed p c = node "embed" p c
-let object' p c = node "object" p c
-let param p c = node "param" p c
+let embed a c = node "embed" a c
+let object' a c = node "object" a c
+let param a c = node "param" a c
 
 (* Text Edits *)
 
-let ins p c = node "ins" p c
-let del p c = node "del" p c
+let ins a c = node "ins" a c
+let del a c = node "del" a c
 
 (* Semantic Text *)
 
-let small p c = node "small" p c
-let cite p c = node "cite" p c
-let dfn p c = node "dfn" p c
-let abbr p c = node "abbr" p c
-let time p c = node "time" p c
-let var p c = node "var" p c
-let samp p c = node "samp" p c
-let kbd p c = node "kbd" p c
-let s p c = node "s" p c
-let q p c = node "q" p c
+let small a c = node "small" a c
+let cite a c = node "cite" a c
+let dfn a c = node "dfn" a c
+let abbr a c = node "abbr" a c
+let time a c = node "time" a c
+let var a c = node "var" a c
+let samp a c = node "samp" a c
+let kbd a c = node "kbd" a c
+let s a c = node "s" a c
+let q a c = node "q" a c
 
 (* Less Common Text Tags *)
 
-let mark p c = node "mark" p c
-let ruby p c = node "ruby" p c
-let rt p c = node "rt" p c
-let rp p c = node "rp" p c
-let bdi p c = node "bdi" p c
-let bdo p c = node "bdo" p c
-let wbr p c = node "wbr" p c
+let mark a c = node "mark" a c
+let ruby a c = node "ruby" a c
+let rt a c = node "rt" a c
+let rp a c = node "rp" a c
+let bdi a c = node "bdi" a c
+let bdo a c = node "bdo" a c
+let wbr a c = node "wbr" a c
 
 (* Interactive Elements *)
 
-let details p c = node "details" p c
-let summary p c = node "summary" p c
-let menuitem p c = node "menuitem" p c
-let menu p c = node "menu" p c
+let details a c = node "details" a c
+let summary a c = node "summary" a c
+let menuitem a c = node "menuitem" a c
+let menu a c = node "menu" a c
+
+(* Keyed Nodes *)
+
+let keyed_node = BsOakVirtualDom.Virtual_dom.Node.keyed_node
+let keyed_ol a c = keyed_node "ol" a c
+let keyed_li a c = keyed_node "li" a c
