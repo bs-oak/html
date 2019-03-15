@@ -152,4 +152,4 @@ let menu a c = node "menu" a c
 
 let keyed_node = BsOakVirtualDom.Virtual_dom.Node.keyed_node
 let keyed_ol a c = keyed_node "ol" a c
-let keyed_li a c = keyed_node "li" a c
+let keyed_ul a c = keyed_node "ul" a c

@@ -152,4 +152,4 @@ val menu : 'a Attribute.t list -> 'a t list -> 'a t
 
 val keyed_node : string -> 'a Attribute.t list -> (string * 'a t) list -> 'a t
 val keyed_ol : 'a Attribute.t list -> (string * 'a t) list -> 'a t
-val keyed_li : 'a Attribute.t list -> (string * 'a t) list -> 'a t
+val keyed_ul : 'a Attribute.t list -> (string * 'a t) list -> 'a t
